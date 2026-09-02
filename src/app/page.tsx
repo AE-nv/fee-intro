@@ -1,12 +1,28 @@
+"use client";
+
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SandwichCard } from "@/components/SandwichCard";
 import { sandwiches } from "@/data/sandwiches";
 
 export default function Home() {
+  // The one source of truth: how many of each sandwich is in the basket.
+  const [basket, setBasket] = useState<Record<string, number>>({});
+
+  function addToBasket(id: string) {
+    setBasket((current) => ({ ...current, [id]: (current[id] ?? 0) + 1 }));
+  }
+
+  // Derived from the basket, never stored separately.
+  const itemCount = Object.values(basket).reduce(
+    (total, qty) => total + qty,
+    0,
+  );
+
   return (
     <div className="flex flex-1 flex-col bg-stone-50">
-      <Header cartCount={3} />
+      <Header cartCount={itemCount} />
 
       <main className="flex flex-1 flex-col">
         <Hero />
@@ -31,6 +47,7 @@ export default function Home() {
                   price={sandwich.price}
                   image={sandwich.image}
                   tag={sandwich.tag}
+                  onAdd={() => addToBasket(sandwich.id)}
                 />
               ))}
             </ul>

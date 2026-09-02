@@ -24,9 +24,11 @@ export function Header({ cartCount }: Props) {
             aria-label="Winkelwagen"
           >
             <Image src="/icons/cart.svg" alt="" width={23} height={23} />
-            <span className="absolute -top-2 -right-2 grid h-4 min-w-4 place-items-center rounded-full bg-red-500 px-1 text-xs font-black text-white ring-2 ring-white">
-              {cartCount}
-            </span>
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 grid h-4 min-w-4 place-items-center rounded-full bg-red-500 px-1 text-xs font-black text-white ring-2 ring-white">
+                {cartCount}
+              </span>
+            )}
           </span>
         </nav>
       </div>

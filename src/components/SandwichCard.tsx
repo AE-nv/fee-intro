@@ -8,9 +8,17 @@ type Props = {
   price: number;
   image: string;
   tag?: "Pikant" | "Veggie";
+  onAdd: () => void;
 };
 
-export function SandwichCard({ name, description, price, image, tag }: Props) {
+export function SandwichCard({
+  name,
+  description,
+  price,
+  image,
+  tag,
+  onAdd,
+}: Props) {
   return (
     <li className="flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white">
       <Image
@@ -34,7 +42,7 @@ export function SandwichCard({ name, description, price, image, tag }: Props) {
           <span className="text-lg font-black">
             € {price.toFixed(2).replace(".", ",")}
           </span>
-          <Button>Toevoegen</Button>
+          <Button onClick={onAdd}>Toevoegen</Button>
         </div>
       </div>
     </li>
