@@ -87,7 +87,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 6,20</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
@@ -114,7 +114,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 5,40</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
@@ -144,7 +144,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 5,80</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
@@ -171,7 +171,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 5,60</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
@@ -203,7 +203,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 4,90</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
@@ -233,7 +233,7 @@ export default function Home() {
                     <span className="text-lg font-black">€ 6,00</span>
                     <button
                       type="button"
-                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-rose-900"
+                      className="rounded-full bg-red-500 px-5 py-2.5 text-xs font-black text-white transition hover:bg-rose-900 active:scale-95"
                     >
                       Toevoegen
                     </button>
