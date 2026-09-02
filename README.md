@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Het Duivels Broodje
 
-## Getting Started
+Demo project for the frontend intro. It's a single-page sandwich menu built with
+[Next.js](https://nextjs.org) (App Router), React and [Tailwind CSS](https://tailwindcss.com).
 
-First, run the development server:
+## Getting started
+
+Requires [Node.js](https://nodejs.org) 20.9 or newer.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | What it does                              |
+| --------------- | ----------------------------------------- |
+| `npm run dev`   | Start the development server on port 3000 |
+| `npm run build` | Create a production build                 |
+| `npm run start` | Serve the production build                |
+| `npm run lint`  | Run ESLint                                |
 
-## Learn More
+## Exercises
 
-To learn more about Next.js, take a look at the following resources:
+`main` is the starting point: the entire menu page lives in one component, with
+no props, no data layer and no state. Every exercise starts from here.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each exercise has its own solution branch, named `<number>-<topic>-solution`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Branch                  | Exercise                       |
+| ----------------------- | ------------------------------ |
+| `1-components-solution` | Split the page into components |
