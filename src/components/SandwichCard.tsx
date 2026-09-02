@@ -5,7 +5,7 @@ import { Tag } from "@/components/Tag";
 type Props = {
   name: string;
   description: string;
-  price: string;
+  price: number;
   image: string;
   tag?: "Pikant" | "Veggie";
 };
@@ -31,7 +31,9 @@ export function SandwichCard({ name, description, price, image, tag }: Props) {
           {description}
         </p>
         <div className="flex items-center justify-between pt-1">
-          <span className="text-lg font-black">{price}</span>
+          <span className="text-lg font-black">
+            € {price.toFixed(2).replace(".", ",")}
+          </span>
           <Button>Toevoegen</Button>
         </div>
       </div>
