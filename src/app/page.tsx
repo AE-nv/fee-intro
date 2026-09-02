@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SandwichCard } from "@/components/SandwichCard";
+import { sandwiches } from "@/data/sandwiches";
 
 export default function Home() {
   return (
@@ -16,50 +17,22 @@ export default function Home() {
               <h2 id="menu-title" className="text-2xl font-black">
                 Onze broodjes
               </h2>
-              <span className="text-xs text-stone-500">6 broodjes</span>
+              <span className="text-xs text-stone-500">
+                {sandwiches.length} broodjes
+              </span>
             </div>
 
             <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              <SandwichCard
-                name="Martino Diabolique"
-                description="Américain, ansjovis, tabasco, augurk. Voor wie het vuur niet vreest."
-                price="€ 6,20"
-                image="/broodjes/martino-diabolique.jpg"
-                tag="Pikant"
-              />
-              <SandwichCard
-                name="Kip curry"
-                description="Kipfilet, huisgemaakte curry, ananas, krulsalade."
-                price="€ 5,40"
-                image="/broodjes/kip-curry.jpg"
-              />
-              <SandwichCard
-                name="Brie du diable"
-                description="Brie, honing, walnoot, rucola. Zoete zonde."
-                price="€ 5,80"
-                image="/broodjes/brie-du-diable.jpg"
-                tag="Veggie"
-              />
-              <SandwichCard
-                name="Krabsalade"
-                description="Krab, mayonaise, tomaat, ei. De klassieker."
-                price="€ 5,60"
-                image="/broodjes/krabsalade.jpg"
-              />
-              <SandwichCard
-                name="Gezond (maar net niet)"
-                description="Kaas, ei, tomaat, komkommer, een flinke lik mayo."
-                price="€ 4,90"
-                image="/broodjes/gezond.jpg"
-                tag="Veggie"
-              />
-              <SandwichCard
-                name="Tonijn tartaar"
-                description="Tonijn, rode ui, sriracha-mayo, jalapeño."
-                price="€ 6,00"
-                image="/broodjes/tonijn-tartaar.jpg"
-                tag="Pikant"
-              />
+              {sandwiches.map((sandwich) => (
+                <SandwichCard
+                  key={sandwich.id}
+                  name={sandwich.name}
+                  description={sandwich.description}
+                  price={sandwich.price}
+                  image={sandwich.image}
+                  tag={sandwich.tag}
+                />
+              ))}
             </ul>
           </div>
         </section>
