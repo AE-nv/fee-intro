@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import { Header } from "@/components/Header";
+import { ShoppingCartProvider } from "@/components/ShoppingCartProvider";
 import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
@@ -17,7 +19,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="nl" className={`${nunitoSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col bg-stone-50 font-sans">
+        {/* The cart lives here, above the routes, so it survives navigation. */}
+        <ShoppingCartProvider>
+          <Header />
+          {children}
+        </ShoppingCartProvider>
+      </body>
     </html>
   );
 }

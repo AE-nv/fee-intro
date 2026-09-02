@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Tag } from "@/components/Tag";
+import { formatPrice } from "@/util/formatPrice";
 
 type Props = {
   name: string;
@@ -39,9 +40,7 @@ export function SandwichCard({
           {description}
         </p>
         <div className="flex items-center justify-between pt-1">
-          <span className="text-lg font-black">
-            € {price.toFixed(2).replace(".", ",")}
-          </span>
+          <span className="text-lg font-black">{formatPrice(price)}</span>
           <Button onClick={onAdd}>Toevoegen</Button>
         </div>
       </div>
