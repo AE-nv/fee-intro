@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
+import { QueryProvider } from "@/components/QueryProvider";
 import { ShoppingCartProvider } from "@/components/ShoppingCartProvider";
 import "./globals.css";
 
@@ -21,10 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="nl" className={`${nunitoSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-stone-50 font-sans">
         {/* The cart lives here, above the routes, so it survives navigation. */}
-        <ShoppingCartProvider>
-          <Header />
-          {children}
-        </ShoppingCartProvider>
+        <QueryProvider>
+          <ShoppingCartProvider>
+            <Header />
+            {children}
+          </ShoppingCartProvider>
+        </QueryProvider>
       </body>
     </html>
   );
