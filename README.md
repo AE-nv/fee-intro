@@ -1,6 +1,6 @@
 # Het Duivels Broodje
 
-Demo project for the frontend intro. It's a single-page sandwich menu built with
+Demo project for the frontend intro. It's a sandwich menu built with
 [Next.js](https://nextjs.org) (App Router), React and [Tailwind CSS](https://tailwindcss.com).
 
 ## Getting started
@@ -26,10 +26,14 @@ Then open [http://localhost:3000](http://localhost:3000).
 ## Exercises
 
 `main` is the starting point: the entire menu page lives in one component, with
-no props, no data layer and no state. Every exercise starts from here.
+no props, no data layer and no state.
 
-Each exercise has its own solution branch, named `<number>-<topic>-solution`:
+The exercises build on each other. Each assignment says which branch to start
+from and where its solution lives.
 
-| Branch                  | Exercise                       |
-| ----------------------- | ------------------------------ |
-| `1-components-solution` | Split the page into components |
+| Exercise                                                      | Assignment                                                                               |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 1 — Split the page into components, render the menu as a list | [01-components.md](exercises/01-components.md)                                           |
+| 2 — Basket state, with the header badge derived from it       | [02-state-management-and-reactivity.md](exercises/02-state-management-and-reactivity.md) |
+| 3 — A `/cart` route, with the basket shared across routes     | [03-routing-and-shared-state.md](exercises/03-routing-and-shared-state.md)               |
+| 4 — Load the menu from an API with TanStack Query             | [04-apis.md](exercises/04-apis.md)                                                       |
