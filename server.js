@@ -42,6 +42,8 @@ async function resolveRequestPath(urlPath) {
     candidates.push(path.join(publicDir, cleanPath));
 
     if (!path.extname(cleanPath)) {
+      candidates.push(path.join(rootDir, `${cleanPath}.html`));
+      candidates.push(path.join(rootDir, cleanPath, "index.html"));
       candidates.push(path.join(rootDir, "index.html"));
     }
   }

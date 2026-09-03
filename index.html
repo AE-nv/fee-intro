@@ -15,17 +15,18 @@
     <div class="page-shell">
       <header class="site-header">
         <div class="container header-inner">
-          <div class="brand">
+          <a class="brand" href="/" aria-label="Terug naar menu">
             <img src="/icons/logo.svg" alt="" width="22" height="22" />
             <span>Het Duivels Broodje</span>
-          </div>
+          </a>
 
           <nav class="header-nav" aria-label="Primary">
-            <span class="active-link">Menu</span>
-            <button class="cart-button" type="button" aria-label="Winkelwagen">
+            <a class="nav-link nav-link--active" href="/">Menu</a>
+            <a class="nav-link" href="/checkout">Checkout</a>
+            <a class="cart-link" href="/checkout" aria-label="Naar checkout">
               <img src="/icons/cart.svg" alt="" width="23" height="23" />
               <span id="cart-count" class="cart-badge" hidden>0</span>
-            </button>
+            </a>
           </nav>
         </div>
       </header>

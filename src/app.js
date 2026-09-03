@@ -1,10 +1,9 @@
 import { sandwiches } from "./data/sandwiches.js";
+import { addToBasket, readBasket } from "./cart-store.js";
 
 const menuList = document.querySelector("#menu-list");
 const menuCount = document.querySelector("#menu-count");
 const cartCount = document.querySelector("#cart-count");
-
-const basket = new Map();
 
 const money = new Intl.NumberFormat("nl-BE", {
   style: "currency",
@@ -16,6 +15,7 @@ function formatPrice(value) {
 }
 
 function getBasketTotal() {
+  const basket = readBasket();
   let total = 0;
 
   for (const quantity of basket.values()) {
@@ -30,11 +30,6 @@ function updateCartBadge() {
 
   cartCount.textContent = String(total);
   cartCount.hidden = total === 0;
-}
-
-function addToBasket(id) {
-  basket.set(id, (basket.get(id) ?? 0) + 1);
-  updateCartBadge();
 }
 
 function renderTag(tag) {
@@ -84,7 +79,10 @@ function renderSandwichCard(sandwich) {
   button.className = "add-button";
   button.type = "button";
   button.textContent = "Toevoegen";
-  button.addEventListener("click", () => addToBasket(sandwich.id));
+  button.addEventListener("click", () => {
+    addToBasket(sandwich.id);
+    updateCartBadge();
+  });
 
   footer.append(price, button);
   content.append(titleRow, description, footer);
@@ -100,3 +98,9 @@ function renderMenu() {
 
 renderMenu();
 updateCartBadge();
+
+window.addEventListener("storage", (event) => {
+  if (event.key === "duivels-broodje-basket") {
+    updateCartBadge();
+  }
+});

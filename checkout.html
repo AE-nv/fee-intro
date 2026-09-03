@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout · Het Duivels Broodje</title>
+    <meta
+      name="description"
+      content="Bekijk je bestelling en plaats je broodjesbestelling."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/src/checkout.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="/" aria-label="Terug naar menu">
+            <img src="/icons/logo.svg" alt="" width="22" height="22" />
+            <span>Het Duivels Broodje</span>
+          </a>
+
+          <nav class="header-nav" aria-label="Primary">
+            <a class="nav-link" href="/">Menu</a>
+            <a class="nav-link nav-link--active" href="/checkout">Checkout</a>
+            <span class="cart-link cart-link--static" aria-label="Winkelwagen">
+              <img src="/icons/cart.svg" alt="" width="23" height="23" />
+              <span id="cart-count" class="cart-badge" hidden>0</span>
+            </span>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero hero--checkout" aria-labelledby="checkout-title">
+          <div class="container hero-inner">
+            <p class="eyebrow">Bestellen · Afrekenen</p>
+            <h1 id="checkout-title">
+              Jouw <span>bestelling.</span>
+            </h1>
+            <p class="hero-copy">
+              Controleer je broodjes en plaats je bestelling in één klik.
+            </p>
+          </div>
+        </section>
+
+        <section class="menu-section" aria-labelledby="checkout-summary-title">
+          <div class="container menu-header">
+            <h2 id="checkout-summary-title">Overzicht</h2>
+            <span id="checkout-count" class="menu-count"></span>
+          </div>
+
+          <div class="container checkout-layout">
+            <section class="checkout-panel">
+              <ul id="checkout-items" class="checkout-list"></ul>
+              <p id="checkout-empty" class="checkout-empty" hidden>
+                Je winkelwagen is nog leeg.
+              </p>
+            </section>
+
+            <aside class="checkout-panel checkout-panel--summary">
+              <div class="checkout-totals">
+                <div>
+                  <span class="checkout-label">Subtotaal</span>
+                  <strong id="checkout-subtotal">€ 0,00</strong>
+                </div>
+                <div>
+                  <span class="checkout-label">Totaal</span>
+                  <strong id="checkout-total">€ 0,00</strong>
+                </div>
+              </div>
+
+              <button id="place-order" class="add-button checkout-button" type="button">
+                Plaats bestelling
+              </button>
+              <p id="checkout-message" class="checkout-message" aria-live="polite"></p>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
