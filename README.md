@@ -1,7 +1,7 @@
 # Het Duivels Broodje
 
-Demo project for the frontend intro. It's a sandwich menu built with
-[Next.js](https://nextjs.org) (App Router), React and [Tailwind CSS](https://tailwindcss.com).
+Demo project for the frontend intro. It's a sandwich menu built with plain
+HTML, CSS and JavaScript.
 
 ## Getting started
 
@@ -18,15 +18,15 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 | Command         | What it does                              |
 | --------------- | ----------------------------------------- |
-| `npm run dev`   | Start the development server on port 3000 |
-| `npm run build` | Create a production build                 |
-| `npm run start` | Serve the production build                |
+| `npm run dev`   | Start the local static server on port 3000 |
+| `npm run build` | Print a no-build reminder                 |
+| `npm run start` | Start the local static server             |
 | `npm run lint`  | Run ESLint                                |
 
 ## Exercises
 
-`main` is the starting point: the entire menu page lives in one component, with
-no props, no data layer and no state.
+`main` is the starting point: the entire menu page lives in one plain browser
+app, with no framework, no props, no data layer and no state.
 
 The exercises build on each other. Each assignment says which branch to start
 from and where its solution lives.

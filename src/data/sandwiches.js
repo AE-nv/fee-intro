@@ -1,0 +1,51 @@
+export const sandwiches = [
+  {
+    id: "martino-diabolique",
+    name: "Martino Diabolique",
+    description:
+      "Américain, ansjovis, tabasco, augurk. Voor wie het vuur niet vreest.",
+    price: 6.2,
+    image: "/broodjes/martino-diabolique.jpg",
+    tags: [{ label: "Pikant", tone: "spicy" }],
+  },
+  {
+    id: "kip-curry",
+    name: "Kip curry",
+    description: "Kipfilet, huisgemaakte curry, ananas, krulsalade.",
+    price: 5.4,
+    image: "/broodjes/kip-curry.jpg",
+    tags: [],
+  },
+  {
+    id: "brie-du-diable",
+    name: "Brie du diable",
+    description: "Brie, honing, walnoot, rucola. Zoete zonde.",
+    price: 5.8,
+    image: "/broodjes/brie-du-diable.jpg",
+    tags: [{ label: "Veggie", tone: "veggie" }],
+  },
+  {
+    id: "krabsalade",
+    name: "Krabsalade",
+    description: "Krab, mayonaise, tomaat, ei. De klassieker.",
+    price: 5.6,
+    image: "/broodjes/krabsalade.jpg",
+    tags: [],
+  },
+  {
+    id: "gezond",
+    name: "Gezond (maar net niet)",
+    description: "Kaas, ei, tomaat, komkommer, een flinke lik mayo.",
+    price: 4.9,
+    image: "/broodjes/gezond.jpg",
+    tags: [{ label: "Veggie", tone: "veggie" }],
+  },
+  {
+    id: "tonijn-tartaar",
+    name: "Tonijn tartaar",
+    description: "Tonijn, rode ui, sriracha-mayo, jalapeño.",
+    price: 6,
+    image: "/broodjes/tonijn-tartaar.jpg",
+    tags: [{ label: "Pikant", tone: "spicy" }],
+  },
+];

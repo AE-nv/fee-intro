@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Het Duivels Broodje</title>
+    <meta
+      name="description"
+      content="Duivelse broodjes, elke dag vers in Leuven. Bestel voor 10u30 en wij leveren op kantoor."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <div class="brand">
+            <img src="/icons/logo.svg" alt="" width="22" height="22" />
+            <span>Het Duivels Broodje</span>
+          </div>
+
+          <nav class="header-nav" aria-label="Primary">
+            <span class="active-link">Menu</span>
+            <button class="cart-button" type="button" aria-label="Winkelwagen">
+              <img src="/icons/cart.svg" alt="" width="23" height="23" />
+              <span id="cart-count" class="cart-badge" hidden>0</span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="container hero-inner">
+            <p class="eyebrow">Elke dag vers · Leuven</p>
+            <h1 id="hero-title">
+              Zondig lekker <br />
+              <span>belegd.</span>
+            </h1>
+            <p class="hero-copy">
+              Duivelse broodjes, één grote verleiding. Bestel voor 10u30 en wij
+              leveren op kantoor.
+            </p>
+          </div>
+        </section>
+
+        <section class="menu-section" aria-labelledby="menu-title">
+          <div class="container menu-header">
+            <h2 id="menu-title">Onze broodjes</h2>
+            <span id="menu-count" class="menu-count"></span>
+          </div>
+
+          <div class="container">
+            <ul id="menu-list" class="menu-grid"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
