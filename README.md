@@ -37,3 +37,4 @@ from and where its solution lives.
 | 2 — Basket state, with the header badge derived from it       | [02-state-management-and-reactivity.md](exercises/02-state-management-and-reactivity.md) |
 | 3 — A `/cart` route, with the basket shared across routes     | [03-routing-and-shared-state.md](exercises/03-routing-and-shared-state.md)               |
 | 4 — Load the menu from an API with TanStack Query             | [04-apis.md](exercises/04-apis.md)                                                       |
+| 5 — A checkout form and a confirmation page                   | [05-forms.md](exercises/05-forms.md)                                                     |
