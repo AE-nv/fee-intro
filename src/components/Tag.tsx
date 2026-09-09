@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 type TagVariant = "accent" | "neutral";
 
 type Props = {
@@ -13,7 +15,10 @@ const variantClasses: Record<TagVariant, string> = {
 export function Tag({ children, variant = "neutral" }: Props) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs leading-none font-bold whitespace-nowrap ${variantClasses[variant]}`}
+      className={clsx(
+        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs leading-none font-bold whitespace-nowrap",
+        variantClasses[variant],
+      )}
     >
       {children}
     </span>

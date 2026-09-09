@@ -10,8 +10,8 @@ export function Hero() {
             id="hero-title"
             className="text-3xl leading-none font-normal tracking-tight lg:text-5xl"
           >
-            Zondig lekker <br />
-            <span className="font-black text-orange-400">belegd.</span>
+            <span className="block">Zondig lekker</span>
+            <span className="block font-black text-orange-400">belegd.</span>
           </h1>
           <p className="max-w-md text-base leading-relaxed text-white/70">
             Duivelse broodjes, één grote verleiding. Bestel voor 10u30 en wij

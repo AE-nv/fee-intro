@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -29,7 +30,10 @@ export function Header() {
           <Link
             href="/cart"
             aria-label="Winkelwagen"
-            className={`relative flex items-center ${pathname === "/cart" ? active : "pb-1 text-black"}`}
+            className={clsx(
+              "relative flex items-center",
+              pathname === "/cart" ? active : "pb-1 text-black",
+            )}
           >
             <Image src="/icons/cart.svg" alt="" width={23} height={23} />
             {itemCount > 0 && (

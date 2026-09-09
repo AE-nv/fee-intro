@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/Button";
+import { LinkButton } from "@/components/LinkButton";
 import { CartLine } from "@/components/CartLine";
 import { useShoppingCart } from "@/components/ShoppingCartProvider";
 import { Spinner } from "@/components/Spinner";
@@ -52,12 +51,11 @@ export default function CartPage() {
               <p className="mt-1 text-sm text-stone-500">
                 Kies een broodje uit het menu en het verschijnt hier.
               </p>
-              <Link
-                href="/"
-                className="mt-5 inline-flex rounded-full border border-black px-5 py-2.5 text-xs font-black text-black transition-colors hover:bg-black hover:text-white"
-              >
-                Naar het menu
-              </Link>
+              <div className="mt-5">
+                <LinkButton href="/" variant="ghost">
+                  Naar het menu
+                </LinkButton>
+              </div>
             </div>
           ) : (
             <>
@@ -80,12 +78,11 @@ export default function CartPage() {
                     ))}
                   </ul>
 
-                  <Link
-                    href="/"
-                    className="inline-flex self-start rounded-full border border-black px-5 py-2.5 text-xs font-black text-black transition-colors hover:bg-black hover:text-white"
-                  >
-                    Verder shoppen
-                  </Link>
+                  <div>
+                    <LinkButton href="/" variant="ghost">
+                      Verder shoppen
+                    </LinkButton>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-4 rounded-2xl border border-stone-200 bg-white p-6">
@@ -96,9 +93,9 @@ export default function CartPage() {
                       {formatPrice(total)}
                     </span>
                   </div>
-                  <Button size="md" fullWidth>
+                  <LinkButton href="/checkout" size="md" fullWidth>
                     Naar afrekenen
-                  </Button>
+                  </LinkButton>
                   <p className="text-xs leading-normal text-stone-400">
                     Bestel voor 10u30, dan leveren we vandaag op kantoor.
                   </p>

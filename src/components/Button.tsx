@@ -1,44 +1,39 @@
-type Variant = "primary" | "ghost" | "neutral" | "dark";
-type Size = "sm" | "md" | "icon";
+import {
+  buttonClasses,
+  type ButtonSize,
+  type ButtonVariant,
+} from "@/components/buttonStyles";
 
 type Props = {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: Variant;
-  size?: Size;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
   fullWidth?: boolean;
   /** Accessible name. Only needed when the children aren't words, e.g. "+". */
   label?: string;
-};
-
-const variantClasses: Record<Variant, string> = {
-  primary: "border-transparent bg-red-500 text-white hover:bg-rose-900",
-  ghost:
-    "border-black bg-transparent text-black hover:bg-black hover:text-white",
-  neutral: "border-stone-200 bg-white text-black hover:bg-stone-100",
-  dark: "border-transparent bg-black text-white hover:bg-stone-700",
-};
-
-const sizeClasses: Record<Size, string> = {
-  sm: "px-5 py-2.5 text-xs",
-  md: "px-7 py-3.5 text-sm",
-  icon: "grid h-7 w-7 place-items-center",
+  type?: "button" | "submit";
+  /** Associates a submit button with a <form> elsewhere on the page, by its id. */
+  form?: string;
 };
 
 export function Button({
   children,
   onClick,
-  variant = "primary",
-  size = "sm",
-  fullWidth = false,
+  variant,
+  size,
+  fullWidth,
   label,
+  type = "button",
+  form,
 }: Props) {
   return (
     <button
-      type="button"
+      type={type}
       onClick={onClick}
+      form={form}
       aria-label={label}
-      className={`rounded-full border font-black transition active:scale-95 ${variantClasses[variant]} ${sizeClasses[size]} ${fullWidth ? "w-full" : ""}`}
+      className={buttonClasses({ variant, size, fullWidth })}
     >
       {children}
     </button>
